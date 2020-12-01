@@ -1,43 +1,64 @@
 # Jenkins on Heroku
 
+
+### step 0 - clone
+
 ```bash
-1 - install heroku
+    https://github.com/erickferreir4/jenkins_heroku.git
+```
+
+### step 1 - install heroku
+
+```bash
     curl https://cli-assets.heroku.com/install.sh | sh
 ```
 
-```bash
-2 - heroku login
-```
+### step 2
 
 ```bash
-3 - heroku create app-name --buildpack heroku/java
+    heroku login
 ```
 
+### step 3
+
 ```bash
-8 - git
+    heroku create app-name --buildpack heroku/java
+```
+
+### step 4 - git
+
+```bash
     git init
     git add .
     git commit -m""
     git push heroku master
 ```
 
-```bash
-6 - heroku git:remote -a app-name
-```
+### step 5
 
 ```bash
-9 - heroku ps:scale web=1
+    heroku git:remote -a app-name
 ```
 
-```bash
-10 - heroku open
-```
+### step 6
 
 ```bash
-11 - passwd admin
+    heroku ps:scale web=1
+```
+
+### step 7
+
+```bash
+    heroku open
+```
+
+### step 8 - password admin
+
+```bash
      heroku logs --app app-name
 ```
+### step 9
 
 ```bash
-12 - copy passwd
+    copy passwd
 ```
